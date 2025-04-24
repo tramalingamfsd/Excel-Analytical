@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Xcelence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-logo">Xcelence</div>
+        </div>
+        <div class="navbar-buttons">
+            <button class="btn btn-outline" onclick="toggleModal()">Sign In</button>
+            <button class="btn btn-primary" onclick="toggleModal(true)">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img src="./bar-chart.png" width="80" />
+                <h2>Xcelence</h2>
+                <p>Analyze and visualize data, together.</p>
+                <p>Sign in or sign up now!</p>
+            </div>
+            <div class="modal-right">
+                <button class="close-btn" onclick="toggleModal(false)">&times;</button>
+
+                <div class="tabs">
+                    <div class="tab active" id="tabSignIn" onclick="showForm('signin')">SIGN IN</div>
+                    <div class="tab" id="tabSignUp" onclick="showForm('signup')">SIGN UP</div>
+                </div>
+
+                <!-- Sign In Form -->
+                <div id="formSignIn">
+                    <div class="form-group">
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button class="form-btn">Sign In</button>
+                    <p style="text-align:center; margin-top:10px;"><a href="#">Forgot password?</a></p>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div id="formSignUp" class="hidden">
+                    <div class="form-group"><input type="text" placeholder="First Name"></div>
+                    <div class="form-group"><input type="text" placeholder="Last Name"></div>
+                    <div class="form-group"><input type="text" placeholder="Organization Name"></div>
+                    <div class="form-group"><input type="text" placeholder="Role"></div>
+                    <div class="form-group"><input type="email" placeholder="Organization Email"></div>
+                    <div class="form-group"><input type="text" placeholder="Username"></div>
+                    <div class="form-group"><input type="password" placeholder="Password"></div>
+                    <button class="form-btn">Sign Up</button>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
